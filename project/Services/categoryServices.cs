@@ -5,7 +5,7 @@ using project.Models;
 
 namespace project.Services
 {
-    public class categoryServices : ICategory_services
+    public class categoryServices : ICategoryServices
     {
         ApplicationDbContext _context;
         public categoryServices(ApplicationDbContext context)

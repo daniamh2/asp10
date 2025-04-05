@@ -6,6 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
+using project.Services;
+using project.Services;
 
 namespace project
 {
@@ -24,7 +26,7 @@ namespace project
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("defaultConnection")));
-
+            builder.Services.AddScoped<ICategoryServices, categoryServices>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

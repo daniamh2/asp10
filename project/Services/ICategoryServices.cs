@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 
 namespace project.Services
 {
-    public interface ICategory_services
+    public interface ICategoryServices
     {
  
         IEnumerable<Category> GetAll();

@@ -1,22 +1,18 @@
-﻿namespace project.Models
+﻿using project.Models;
+
+namespace project.DTOs.Requests
 {
-    public class Product
+    public class ProductRequest
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
         public decimal Discount { get; set; }
-        public string mainImg { get; set; }
+        public IFormFile mainImg { get; set; }
         public int Quantity { get; set; }
         public double Rate { get; set; }
         public bool Status { get; set; }
-        public Category Category { get; set; }
         public int CategoryId { get; set; }
-        public Brand Brand { get; set; }
         public int BrandId { get; set; }
-
-
-
     }
 }

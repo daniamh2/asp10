@@ -1,14 +1,12 @@
-﻿using System.Collections.Generic;
-
-namespace project.Models
+﻿namespace project.Models
 {
-    public class Category
+    public class Brand
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public bool status { get; set; }
-        public ICollection<Product> Products { get;  }
+        public ICollection<Product> Products { get; }
 
     }
 }

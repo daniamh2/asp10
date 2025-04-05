@@ -24,7 +24,7 @@ namespace project.Controllers
         public IActionResult GetById([FromRoute] int id)
         {
             var category = categoryServices.Get(c => c.Id == id);
-            return category == null ? NotFound() : Ok(category.Adapt<IEnumerable<CategoryResponse>>());
+            return category == null ? NotFound() : Ok(category.Adapt<CategoryResponse>());
         }
 
         [HttpPost("")]
